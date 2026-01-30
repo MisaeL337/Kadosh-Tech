@@ -1,0 +1,117 @@
+/* Configurações Gerais e Cores */
+:root {
+    --bg-color: #004e92;       /* Cor de fundo base (azul) */
+    --bg-gradient: linear-gradient(135deg, #000428, #004e92); /* Degradê Azul Tech */
+    --text-color: #ffffff;     /* Texto branco */
+    --btn-bg: #ffffff;         /* Fundo do botão (Branco) */
+    --btn-text: #003366;       /* Texto do botão (Azul Escuro) */
+    --btn-border: #ffffff;     /* Borda do botão */
+    --accent: #00d2ff;         /* Azul Ciano para detalhes/borda foto */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* background: var(--bg-gradient); */
+    background-color: var(--bg-color); /* Cor de segurança caso a imagem não carregue */
+    
+    /* --- IMAGEM DE FUNDO --- */
+    background-image: url('../img/fundoKadosh.png'); /* <--- Coloque o nome da sua imagem aqui */
+    background-size: cover;       /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center;  /* Centraliza a imagem */
+    background-attachment: fixed; /* A imagem fica fixa enquanto você rola a tela */
+
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Limita a largura para parecer um app */
+    text-align: center;
+}
+
+/* Foto de Perfil */
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    margin-bottom: 15px;
+}
+
+/* Textos */
+h1 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+p.description {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Botões de Link */
+.link-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    text-decoration: none;
+    border: 1px solid var(--btn-border);
+    border-radius: 50px; /* Borda arredondada */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    
+    /* Flexbox para alinhar título e subtítulo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para posicionar a etiqueta (badge) */
+}
+
+.link-btn:hover {
+    background-color: #e6e6e6;
+    border-color: var(--accent);
+    transform: translateY(-2px); /* Leve subida ao passar o mouse */
+}
+
+.btn-title {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.btn-subtitle {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    font-size: 0.75rem;
+    color: #fffcfc;
+}
